@@ -1,0 +1,122 @@
+<html>
+<head>
+<center>
+
+<style>
+div{
+  background-color: #FAFAD2;
+  width: 300px;
+  border: 5px solid rgb(0, 0, 0);
+  padding: 50px;
+  margin: 20px;
+  
+}
+
+  body {
+  background-image: url('view.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+ul {
+	list-style-type:none;
+	margin:0; 
+	padding:12;
+	overflow:hidden;
+	background-color:#FAFAD2;
+	
+}
+
+li {
+	float:left;
+}
+
+li a {
+	display:block;
+	color:silver;
+	tex-align:center;
+	padding: 14px 16px;
+	text-decoration:none;
+	font-family:georgia;
+}
+
+li a:hover {
+	background-color:rgb(0, 0, 0);
+}
+
+.button {
+  background-color: #FAFAD2; /* Green */
+  border: none;
+  color: silver;
+  padding: 15px 32px;
+
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.60s;
+  float: left;
+}
+
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+</style>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["Bake"].value;
+  var pwd = document.forms["myForm"]["It"].value;
+  
+  
+  
+   if (x == "Bake" ) {
+			if (pwd == "It"){
+   
+				alert("Log in Successfully!");
+				location.replace('index.html');
+		}
+			
+					else{
+				
+				alert("Incorrect Username or Password!");
+				
+			}
+			}
+			else{
+				
+				alert("Incorrect Username or Password!");
+				
+				}
+				return false;
+  }
+
+  
+</script>
+</head>
+
+
+<br>
+<br>
+<body class="s">
+<div>
+<h1> Gateway to Goodies </h1>
+
+
+
+<form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+  Sweet Alias: <input type="text" name="Bake"><br/><br/>
+  Dessert Passcode: <input type="password" name="It"> <br/><br/>
+ <input type="submit" value="Submit">
+</form>
+
+
+</div>
+
+</body>
+</html>
